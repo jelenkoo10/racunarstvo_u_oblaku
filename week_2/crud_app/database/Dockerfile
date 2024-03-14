@@ -1,0 +1,6 @@
+FROM mysql:latest
+
+ENV MYSQL_ALLOW_EMPTY_PASSWORD=true
+ENV MYSQL_DATABASE=docker_books
+
+EXPOSE 3306

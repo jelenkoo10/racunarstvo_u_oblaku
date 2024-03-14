@@ -1,0 +1,139 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Simple Books API",
+    "version": "1.0.0",
+    "description": "This is simple and intuitive API created for purposes of learning Docker and the concept of multi-container applications."
+  },
+  "basePath": "/",
+  "paths": {
+    "/books": {
+      "get": {
+        "summary": "Get all books from database",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create new book",
+        "parameters": [
+          {
+            "name": "book",
+            "in": "body",
+            "description": "Book information",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "author": {
+                  "type": "string"
+                },
+                "genre": {
+                  "type": "string"
+                },
+                "publication_year": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Book successfully created!"
+          }
+        }
+      }
+    },
+    "/books/{id}": {
+      "get": {
+        "summary": "Get book by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the book we want to fetch",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Book not found..."
+          }
+        }
+      },
+      "put": {
+        "summary": "Update book by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the book we want to update",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "book",
+            "in": "body",
+            "description": "New book data",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "author": {
+                  "type": "string"
+                },
+                "genre": {
+                  "type": "string"
+                },
+                "publication_year": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Book successfully updated!"
+          },
+          "404": {
+            "description": "Book not found..."
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete book by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the book we want to delete",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Book successfully deleted!"
+          },
+          "404": {
+            "description": "Book not found..."
+          }
+        }
+      }
+    }
+  }
+}
