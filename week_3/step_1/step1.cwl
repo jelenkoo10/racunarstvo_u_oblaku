@@ -10,6 +10,16 @@ inputs:
     type: File
     inputBinding:
       position: 1
+  target_column:
+    type: string
+    inputBinding:
+      position: 2
+      prefix: "--target"
+  train_percentage:
+    type: float
+    inputBinding:
+      position: 3
+      prefix: "--train_percentage"
 
 outputs:
   csv:

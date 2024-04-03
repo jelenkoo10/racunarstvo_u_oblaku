@@ -43,4 +43,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     performance_metrics = train_and_evaluate_model(args.cleaned_dataset, args.target_column, args.kFold)
-    print("(Prosečan RMSE, prosečan PRMSE):", performance_metrics)
+    print("(Average RMSE, average PRMSE):", performance_metrics)
