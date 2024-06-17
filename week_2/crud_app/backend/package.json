@@ -1,19 +1,24 @@
 {
-  "name": "crud_app",
+  "name": "backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.2",
-    "express": "^4.18.3",
-    "mysql": "^2.18.1",
-    "swagger-ui-express": "^5.0.0"
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "sequelize": "^5.16.0",
+    "sqlite3": "^4.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1",
+    "sequelize-cli": "^5.5.0"
   }
 }
