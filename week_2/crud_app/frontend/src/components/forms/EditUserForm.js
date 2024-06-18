@@ -53,7 +53,7 @@ const EditUserForm = props => {
                 <div className="row">
                     <div className="input-field col s12 m6">
 
-                        <button className="waves-effect waves-light btn">Update</button>
+                        <button className="waves-effect waves-light btn">Izmeni</button>
                     </div>
 
                     <div className="input-field col s12 m6">
@@ -61,7 +61,7 @@ const EditUserForm = props => {
                         <button 
                             className="waves-effect waves-light btn"
                             onClick={() => props.setEditing(false)}
-                            >Cancel</button>
+                            >Otkaži</button>
                     </div>
                 </div>
             </form>

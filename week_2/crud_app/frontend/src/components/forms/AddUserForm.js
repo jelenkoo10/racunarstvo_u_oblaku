@@ -34,7 +34,7 @@ const AddUserForm = props => {
                             value={user.name}
                             onChange={handleInputChange} 
                             required />
-                        <label htmlFor="name">Name</label>
+                        <label htmlFor="name">Ime</label>
                     </div>
                 </div>
 
@@ -47,14 +47,14 @@ const AddUserForm = props => {
                             value={user.username}
                             onChange={handleInputChange} 
                             required />
-                        <label htmlFor="username">Username</label>
+                        <label htmlFor="username">Korisničko ime</label>
                     </div>
                 </div>
                 
                 <div className="row">
                     <div className="input-field col s12">
 
-                        <button className="waves-effect waves-light btn">Add</button>
+                        <button className="waves-effect waves-light btn">Dodaj</button>
                     </div>
                 </div>
             </form>

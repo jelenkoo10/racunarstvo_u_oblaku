@@ -91,7 +91,7 @@ class Home extends Component {
                     {
                         this.state.editing ? (
                             <div className="col s12 l6">
-                                <h4>Edit User</h4>
+                                <h4>Izmeni korisnika</h4>
                                 <EditUserForm 
                                     editing={this.state.editing}
                                     setEditing={this.setEditing}
@@ -101,14 +101,14 @@ class Home extends Component {
                             </div>
                         ) : (
                             <div className="col s12 l6">
-                                <h4>Add user</h4>
+                                <h4>Dodaj korisnika</h4>
                                 <AddUserForm addUser={this.addUser} />
                             </div>
                         )
                     }
                     
                     <div className="col s12 l6">
-                        <h5>Users</h5>
+                        <h5>Korisnici</h5>
                         <UserTable users={users} editRow={this.editRow} deleteUser={this.deleteUser} />
                     </div>
                 </div>
