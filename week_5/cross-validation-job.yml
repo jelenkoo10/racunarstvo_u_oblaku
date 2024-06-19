@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: cross-validation-job
+spec:
+  template:
+    spec:
+      containers:
+        - name: cwltool-container
+          image: jelenko10/cwltool_image
+          command: ["cwltool", "/workflow/train.cwl", "/workflow/input.yml"]
+          envFrom:
+            - configMapRef:
+                name: dataset-configmap
+      restartPolicy: Never
