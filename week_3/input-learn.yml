@@ -1,0 +1,7 @@
+dataset_file:
+  class: File
+  path: ./output.csv
+script:
+  class: File
+  path: ./learn.py
+

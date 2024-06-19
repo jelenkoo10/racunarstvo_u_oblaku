@@ -1,0 +1,11 @@
+dataset_file:
+  class: File
+  path: ./HousingData.csv
+preprocess_script:
+  class: File
+  path: ./data.py
+learn_script:
+  class: File
+  path: ./learn.py
+folds: [1, 2, 3, 4, 5]
+n_splits: 5

@@ -1,0 +1,6 @@
+dataset_file:
+  class: File
+  path: ./HousingData.csv
+script:
+  class: File
+  path: ./data.py

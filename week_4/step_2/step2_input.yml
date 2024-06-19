@@ -1,3 +1,0 @@
-cleanedCsvFile:
-  class: File
-  path: cleaned_dataset.csv

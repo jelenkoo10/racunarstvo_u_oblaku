@@ -1,3 +1,0 @@
-csvFile:
-  class: File
-  path: HousingData.csv
